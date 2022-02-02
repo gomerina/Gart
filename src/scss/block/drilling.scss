@@ -1,0 +1,36 @@
+.drilling {
+	padding: 0 0 200px 0;
+	position: relative;
+	overflow: hidden;
+	background: url(../img/drilling-bg.svg) no-repeat bottom -334px left;
+	background-size: cover;
+}
+.drilling__inner {
+	max-width: 1309px;
+	margin: 80px auto 0 auto;
+}
+.drilling__advantages {
+	font-size: 28px;
+	margin: 0 0 177px 119px;
+	display: grid;
+	grid-template-columns: 2.55fr 2fr;
+}
+.drilling__advantages-item {
+	display: inline-block;
+	position: relative;
+	padding: 0 78px 0 0;
+	&:last-child {
+		padding: 0;
+	}
+	&:before {
+		content: '';
+		width: 39px;
+		height: 52px;
+		background: url(../img/drilling-flag.png) no-repeat;
+		position: absolute;
+		left: -58px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+

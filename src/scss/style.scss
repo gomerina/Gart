@@ -1,0 +1,52 @@
+h1 {
+	font-family: 'Gotham Pro Bold';
+	font-size: 75px;
+	line-height: 84px;
+	text-transform: uppercase;
+	margin: 0 0 54px 56px;
+}
+h4 {
+	font-size: 22px;
+	font-family: 'Gotham Pro Medium';
+}
+h5 {
+	font-size: 20px;
+	line-height: 24px;
+	font-family: 'Gotham Pro Medium';
+}
+.blue-text {
+	color: #005AFF !important;
+}
+.white-text {
+	color: #fff;
+}
+.blue__btn {
+	background: #005AFF;
+	border-radius: 3px;
+}
+.heading {
+	font-family: 'Gotham Pro Bold';
+	text-transform: uppercase;
+}
+.heading__wrapper {
+	display: flex;
+}
+.heading-top {
+	font-size: 45px;
+}
+.heading-body {
+	font-size: 75px;
+}
+.subheading {
+	font-size: 24.2748px;
+	line-height: 29px;
+	font-family: 'Gotham Pro Medium';
+}
+@import './nullstyle.scss';
+@import './font.scss';
+@import './block/header.scss';
+@import './block/drilling.scss';
+@import './block/metering.scss';
+@import './block/expirience.scss';
+@import './block/advantages.scss';
+@import './block/compare.scss';

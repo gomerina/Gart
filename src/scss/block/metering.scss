@@ -1,0 +1,85 @@
+.metering {
+	min-height: 278px;
+	max-width: 1198px;
+	margin: 0 auto;
+	position: relative;
+	left: 8px;
+	background: url(../img/metering-bg.png);
+	background-size: 100% 100%;
+	padding: 33px 128px 0 369px;
+	color: #fff;
+	z-index: 3;
+	& img {
+		position: absolute;
+		left: -29px;
+		top: -108px;
+	}
+}
+.metering__heading {
+	margin: 0 0 49px 0;
+}
+.metering__form {
+	display: flex;
+	font-family: 'Gotham Pro Medium';
+	font-size: 16px;
+	margin: 0 0 43px 0;
+}
+.metering__input {
+	padding: 20px 15px 19px 50px;
+	margin: 0 39px 0 0;
+	width: 310px;
+	border-radius: 3px;
+	background: #2e3a4d url(../img/sprite.svg#icon-phone) no-repeat left 1px top 1px;
+	background-size: 50px 53px;
+	color: #fff;
+}
+.metering__input::-webkit-input-placeholder { 
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__input:-moz-placeholder { 
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__input::-moz-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__input:-ms-input-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__input::-ms-input-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__input::placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.metering__btn {
+	padding: 17px 5px 17px 22px;
+	color: #fff;
+	width: 310px;
+	font-size: 16px;
+	text-align: left;
+	position: relative;
+	&:after {
+		content: url(../img/sprite.svg#arrow);
+		width: 32px;
+		height: 12px;
+		position: absolute;
+		right: 11px;
+		top: 18px;
+	}
+}
+.metering__descr {
+	line-height: 17px;
+	font-size: 14px;
+}

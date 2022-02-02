@@ -1,0 +1,138 @@
+.compare {
+	background: url(../img/compare-bg.svg) no-repeat;
+	background-size: cover;
+	min-height: 1730px;
+	margin: -428px 0 0 0;
+	overflow-x: hidden;
+}
+.compare__inner {
+	max-width: 1249px;
+	margin: 0 auto;
+	padding: 386px 14px 0 14px;
+}
+.compare__heading {
+	margin: 0 0 40px 11px;
+}
+.compare__heading-top {
+	margin: 0 0 15px 3px;
+}
+.compare__subheading {
+	margin: 0 0 79px 16px;
+	max-width: 989px;
+}
+.compare__items {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 0 17px;
+}
+.compare__item-list--false,
+.compare__item-list--success {
+	padding: 0 0 45px 0;
+}
+.compare__item--white {
+	background: #fff;
+	z-index: 1;
+	&:before {
+		content: url(../img/explosions.png);
+		position: absolute;
+		right: -47px;
+		top: 116px;
+		z-index: 2;
+	}
+	&:after {
+		content: url(../img/dirt.png);
+		position: absolute;
+		bottom: -86px;
+		left: -71px;
+		z-index: -1;
+	}
+}
+.compare__item--blue {
+	background: #005AFF;
+	z-index: 1;
+}
+.compare__item--white,
+.compare__item--blue {
+	position: relative;
+	max-width: 489px;
+	width: 100%;
+	border-radius: 3px;
+	height: 100%;
+}
+.compare__text {
+	padding: 36px 20px 0 30px;
+}
+.compare__item-heading {
+	line-height: 22px;
+	max-width: 341px;
+	margin: 0 0 31px 0;
+}
+.compare__list-item--false,
+.compare__list-item--success {
+	position: relative;
+	padding: 0 0 0 41px;
+	line-height: 19.2px;
+	letter-spacing: .1px;
+	margin: 0 0 18px 0;
+	&:last-child {
+		margin: 0;
+	}
+	&:before {
+		content: '';
+		width: 29px;
+		height: 29px;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.compare__list-item--false {
+	max-width: 359px;
+	&:before {
+		background: #E75855 url(../img/sprite.svg#x-mark) no-repeat center;
+		background-size: 25px 25px;
+	}
+}
+.compare__list-item--success {
+	max-width: 412px;
+	&:before {
+		background: #FFFFFF url(../img/sprite.svg#success-mark) no-repeat center;
+		background-size: 25px 25px;
+	}
+}
+.compare__item-img {
+	position: relative;
+	padding-top: 53%;
+	& img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: calc(100% + 2px);
+		width: 100%;
+	}
+}
+.leaf {
+	position: absolute;
+	&.one {
+		right: -117px;
+		top: 30px;
+		z-index: 2;
+	}
+	&.two {
+		right: -105px;
+		top: 221px;
+		z-index: -1;
+	}
+	&.three {
+		left: -98px;
+		top: 295px;
+		z-index: -1;
+	}
+	&.four {
+		right: -22px;
+		bottom: -90px;
+		z-index: 2;
+	}
+}

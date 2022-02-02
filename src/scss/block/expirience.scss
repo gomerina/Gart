@@ -1,0 +1,116 @@
+.expirience {
+	background: url(../img/expirience-bg.svg) no-repeat top left;
+	background-size: cover;
+	min-height: 693px;
+	position: relative;
+	z-index: 2;
+	margin: -415px 0 0 0;
+	padding: 0 0 12px 0;
+	box-sizing: content-box;
+	&:after {
+		content: '';
+		width: 100%;
+		height: 1px;
+		background: #FFFFFF;
+		opacity: 0.3;
+		position: absolute;
+		left: 0;
+		bottom: 16px;
+	}
+}
+.expirience__inner {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 8px;
+	min-height: 693px;
+}
+
+.expirience__heading-wrapper {
+	position: relative;
+	margin: 0 0 45px 0;
+	padding: 424px 0 0 0;
+}
+.expirience__heading-top {
+	margin: 0 0 0 5px;
+}
+.expirience__heading-body {
+	font-size: 110px;
+	margin: 15px 56px 0 0;
+}
+.heading__body-box {
+	display: flex;
+	flex-wrap: wrap;
+}
+.expirience__subheading {
+	font-size: 22.5px;
+	text-transform: none;
+	& p {
+		margin: 76px 0 0 0;
+	}
+}
+.expirience__list {
+	font-size: 18px;
+	margin: 16px 0 0 0;
+}
+.expirience__list-item {
+	position: relative;
+	padding: 0 0 0 39px;
+	margin: 0 0 7px 0;
+	&:last-child {
+		margin: 0;
+	}
+	&:before {
+		content: '';
+		width: 21px;
+		height: 1px;
+		background: #fff;
+		display: inline-block;
+		position: absolute;
+		left: 2px;
+		top: 8px;
+	}
+}
+.expirience__years {
+	padding: 0 8px;
+	display: grid;
+	grid-template-columns: 213px 211px 213px 119px 164px;
+	grid-column-gap: 67px;
+}
+.expirience__years-item {
+	max-width: 149px;
+}
+.expirience__years-item:nth-child(4),
+.expirience__years-item:nth-child(5) {
+	position: relative;
+	bottom: 12px;
+}
+.expirience__years-head {
+	font-size: 12px;
+	margin: 0 0 3px 0;
+}
+.expirience__years-body {
+	font-size: 16px;
+	font-family: 'Gotham Pro Medium';
+}
+.expirience__lines {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 1px 0 0 0;
+	padding: 0 8px;
+}
+.expirience__line-item {
+	width: 1px;
+	height: 2px;
+	background: #fff;
+	margin: 0 92px 0 0;
+	position: relative;
+	top: 1px;
+	&:last-child {
+		margin: 0;
+	}
+	&:first-child {
+		height: 8px;
+		top: -5px;
+	}
+}
