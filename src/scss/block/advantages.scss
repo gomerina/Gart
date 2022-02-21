@@ -2,11 +2,12 @@
 	background: url(../img/expirience-bottom.svg) no-repeat;
 	background-size: cover;
 	min-height: 881px;
+	padding: 0 0 359px 0;
 }
 .advantages__inner {
-	max-width: 1192px;
+	max-width: 1220px;
 	margin: 0 auto;
-	padding: 69px 0 0 0;
+	padding: 69px 14px 0 14px;
 	display: grid;
 	grid-template-columns: 2fr 2fr;
 	grid-column-gap: 32px;
@@ -19,12 +20,7 @@
 .advantages__img {
 	max-width: 68px;
 	height: 79.5px;
-	margin: 0 18px 0 0;
-	& img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+	margin: 0 24px 0 0;
 }
 .advantages__heading {
 	margin: 4px 0 0 0;
@@ -34,4 +30,36 @@
 	font-size: 14px;
 	line-height: 17px;
 	max-width: 450px;
+}
+@media screen and (max-width: 1170px) {
+	.advantages {
+		margin: -231px 0 0 0;
+		padding: 0 0 68px 0;
+		position: relative;
+		z-index: 4;
+	}
+}
+@media screen and (max-width: 769px) {
+	.advantages {
+		transform: skewY(-12.5deg);
+		background: #37455C;
+		margin: -272px 0 0 0;
+		padding: 0 0 20px 0;
+	}
+	.advantages__inner {
+		grid-template-columns: 4fr;
+		transform: skewY(12.5deg);
+		padding: 120px 14px 0 14px;
+	}
+	.advantages__heading {
+		margin: 0;
+	}
+	.advantages__inner {
+		grid-row-gap: 32px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.advantages__inner {
+		padding: 80px 14px 0 14px;
+	}
 }

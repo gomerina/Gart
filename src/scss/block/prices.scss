@@ -1,0 +1,439 @@
+.prices {
+	transform: skewY(-12.5deg);
+	background: #EFF4F5;
+	padding: 0 0 343px 0;
+}
+.prices__inner {
+	max-width: 1216px;
+	margin: 0 auto;
+	padding: 217px 14px 0 14px;
+	transform: skewY(12.5deg);
+}
+.prices__heading {
+	margin: 0 0 34px 0;
+}
+.prices__heading-top {
+	margin: 0 0 14px 0;
+}
+.prices__subheading {
+	max-width: 894px;
+	font-family: 'Gotham Pro Medium';
+	line-height: 19.2px;
+	margin: 0 0 59px 0;
+}
+.prices__timing {
+	position: relative;
+	padding: 22px 310px 28px 90px;
+	margin: 0 0 93px 0;
+	background: #fff url(../img/sprite.svg#lightning) no-repeat left -4px center;
+	background-size: 100px 100px;
+	border-radius: 8px;
+}
+.prices__timing-head {
+	font-family: 'Gotham Pro Medium';
+	font-size: 18px;
+	line-height: 21.6px;
+	margin: 0 0 7px 0;
+}
+.prices__timing-body {
+	line-height: 19px;
+}
+.prices__timing-text {
+	max-width: 777px;
+}
+.pricing__timing-btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 294px;
+	height: 100%;
+	background: #005AFF;
+	padding: 0 0 0 36px;
+	font-size: 16px;
+	text-align: left;
+	padding: 0 0 0 40px;
+	border-radius: 0px 8px 8px 0px;
+}
+.prices__items-heading {
+	display: flex;
+	align-items: center;
+	font-family: 'Gotham Pro Medium';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 0 0 88px 0;
+	& img {
+		object-fit: cover;
+		margin: 0 28px 0 0;
+	}
+}
+.single-pipe {
+	width: 35px;
+	height: 32.87px;
+}
+.prices__wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 37px 0;
+}
+.prices__items-box {
+	display: grid;
+	grid-template-columns: 250px 250px 250px;
+	padding: 0 18px 0 0;
+}
+.prices__item {
+	border-radius: 8px;
+	padding: 0 0 42px 0;
+	background: #FFFFFF;
+	&:last-child {
+		margin: 0 !important;
+	}
+}
+.prices__img {
+	position: relative;
+	z-index: 2;
+	margin: -71px 0 0 0;
+	& img {
+		width: 100%;
+	}
+}
+.prices__info {
+	background: #37455C;
+	padding: 72px 27px 35px 27px;
+	transform: skewY(8deg);
+	margin: -92px 0 0 0;
+	min-height: 166.14px;
+	box-sizing: border-box;
+}
+.prices__info-inner {
+	transform: skewY(-8deg);
+}
+.prices-value {
+	font-size: 18px;
+	font-family: 'Roboto';
+	letter-spacing: 1px;
+}
+.prices__info-head {
+	margin: 0 0 7px 0;
+}
+.meter-text {
+	font-size: 11px;
+	margin: 0 0 0 -2px;
+}
+.prices__info-body {
+	line-height: 15px;
+}
+.prices__list {
+	padding: 0 20px 0 27px;
+	margin: 20px 0 0 0;
+	font-size: 12px;
+	font-family: 'Gotham Pro Medium';
+}
+.prices__list-item--false,
+.prices__list-item--success {
+	margin: 0 0 11px 0;
+	position: relative;
+	&:last-child {
+		margin: 0;
+	}
+}
+.prices__list-item--false {
+	color: #7A2927;
+	&:before {
+		content: '';
+		width: 15px;
+		height: 15px;
+		background: url(../img/sprite.svg#x-mark-red) no-repeat;
+		background-size: 15px 15px;
+		position: absolute;
+		left: -20px;
+		top: 4px;
+	}
+}
+.prices__list-item--success:before {
+	content: '';
+	width: 15px;
+	height: 15px;
+	background: url(../img/sprite.svg#success-mark) no-repeat;
+	background-size: 15px 15px;
+	position: absolute;
+	left: -20px;
+	top: 4px;
+}
+.single-pipe__aside {
+	width: 286px;
+	margin: -38px 0 0 0;
+}
+.aside__block--single {
+	font-family: 'Gotham Pro Medium';
+	padding: 12px 8px 12px 80px;
+	width: 100%;
+	min-height: 100px;
+	margin: 0 0 15px 0;
+	background: #FFFFFF;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	&:before {
+		content: '';
+		width: 30px;
+		height: 30px;
+		background: #005AFF url(../img/sprite.svg#success-mark-white) no-repeat center;
+		background-size: 25px 30px;
+		border-radius: 50%;
+		position: absolute;
+		left: 28px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.aside__block--info {
+	border-radius: 8px;
+	text-align: center;
+}
+.aside__info-body {
+	background: #FFFFFF;
+	padding: 28px 24px 24px 24px;
+	font-family: 'Gotham Pro Bold';
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+}
+.aside__link {
+	min-height: 66px;
+	display: flex;
+	align-items: center;
+	background: #37455C;
+	padding: 0 51px;
+	border-radius: 0px 0px 8px 8px;
+	position: relative;
+	&:after {
+		content: url(../img/sprite.svg#arrow);
+		width: 32px;
+		height: 12px;
+		position: absolute;
+		right: 39px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.both-pipe {
+	width: 36px;
+	height: 49px;
+}
+.best-decision{
+	background: #005AFF url(../img/sprite.svg#best-decision) no-repeat left 0px center;
+	background-size: 77px 76px;
+	box-shadow: 0px 16px 24px rgba(0, 90, 255, 0.12);
+	border-radius: 8px;
+	padding: 15px 15px 15px 75px;
+	width: 192px;
+	margin: 56px auto 0 auto;
+	font-family: 'Gotham Pro Medium';
+}
+.both-pipe__aside {
+	width: 286px;
+	text-align: center;
+	margin: -19px 0 0 0;
+	& img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
+}
+.aside-question {
+	font-family: 'Gotham Pro Bold';
+	font-size: 18px;
+	margin: 13px 0 25px 0;
+}
+.coins-icon {
+	width: 46px;
+	height: 30px;
+	margin: 0 0 18px 0;
+}
+.bank-icon {
+	width: 34px;
+	height: 34px;
+	margin: 0 0 22px 0;
+}
+.aside__block--both {
+	padding: 32px 20px 36px 20px;
+	background: #fff;
+	border-radius: 8px;
+	margin: 0 0 1px 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+.aside-descr {
+	line-height: 16.8px;
+	font-size: 14px;
+	margin: 0 auto;
+	font-family: 'Gotham Pro Medium';
+}
+.aside-descr.last {
+	margin: 15px 0 33px 0;
+}
+.bank-logo {
+	display: inline-block;
+	margin: 0 0 5px 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+.prices__mobile-box {
+	transform: skewY(12.5deg);
+	padding: 0 14px;
+}
+.prices__wrapper .swiper {
+	overflow: visible;
+	margin: 0;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: auto;
+	top: 0;
+	overflow: visible;
+}
+.swiper-pagination-bullet {
+	max-width: 10px;
+	width: 100%;
+	transition: max-width .3s linear;
+	height: 4px;
+	border-radius: 8px;
+	position: relative;
+	bottom: 1px;
+}
+.swiper-pagination-bullet-active {
+	background: #37455C;
+	max-width: 48px;
+	width: 100%;
+	height: 4px;
+	transition: max-width .3s linear;
+}
+@media screen and (max-width: 1170px) {
+	.aside__block--single {
+		padding: 12px 8px 12px 55px;
+		&:before {
+			left: 15px;
+		}
+	}
+	.aside__link:after {
+		right: 11px;
+	}
+	.single-pipe__aside,
+	.both-pipe__aside {
+		width: 100%;
+		max-width: 286px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.single-pipe__aside {
+		margin: 0 0 52px 0;
+	}
+	.single-pipe__aside,
+	.both-pipe__aside {
+		width: 100%;
+		max-width: 100%;
+	}
+	.aside__link {
+		justify-content: center;
+	}
+	.aside__link:after {
+		display: none;
+	}
+	.bank-logo {
+		display: flex;
+		justify-content: center;
+	}
+	.prices__items-box {
+		display: flex;
+		gap: 0;
+		padding: 0;
+	}
+	.prices__item {
+		height: auto;
+	}
+	.prices__img img {
+		width: 100%;
+	}
+	.prices__wrapper .swiper {
+		overflow: hidden;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 120px 0 0 0;
+	}
+	.prices__items-heading {
+		margin: 0 0 23px 0;
+	}
+}
+@media screen and (max-width: 769px) {
+	.prices__img {
+		margin: -103px 0 0 0;
+	}
+	.prices__info {
+		padding: 142px 27px 35px;
+		margin: -164px 0 0 0;
+	}
+	.pricing__timing-btn {
+		bottom: 0;
+		left: 0;
+		right: auto;
+		top: auto;
+		height: 79px;
+		width: 100%;
+		text-align: center;
+		padding: 0 20px;
+		border-radius: 0;
+	}
+	.prices__timing-head {
+		margin: 0 0 15px 0;
+	}
+	.swiper-slide {
+		opacity: .3;
+		transition: opacity .3s linear;
+	}
+	.swiper-slide-active {
+		opacity: 1;
+		transition: opacity .3s linear;
+	}
+	.prices__timing {
+		padding: 22px 16px 84px 90px;
+		margin: 0 0 78px 0;
+		background: #fff url(../img/sprite.svg#lightning) no-repeat left -4px top -6px;
+		background-size: 100px 100px;
+	}
+	.prices__inner {
+		padding: 100px 14px 0 14px;
+	}
+	.aside__block--single {
+		min-height: 68px;
+		padding: 12px 8px 12px 82px;
+		margin: 0 0 18px 0;
+	}
+	.aside__block--single:before {
+		left: 29px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.prices__inner {
+		padding: 61px 14px 0 14px;
+	}
+	.prices__heading {
+		margin: 0 0 18px 0;
+	}
+	.prices__subheading {
+		font-size: 14px;
+		line-height: 16.8px;
+		margin: 0 0 41px 0;
+	}
+	.prices__items-heading {
+		font-size: 18px;
+	}
+	.prices__wrapper {
+		margin: 0 0 40px 0;
+	}
+	.aside__info-body {
+		padding: 28px 80px 24px;
+	}
+}

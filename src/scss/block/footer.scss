@@ -1,0 +1,127 @@
+.footer {
+	position: relative;
+	z-index: 3;
+	margin: -240px 0 0 0;
+}
+.map-wrapper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.map__box {
+	max-width: 1252px;
+	margin: 0 auto;
+}
+.map-info {
+	background: #37455C;
+	position: relative;
+	z-index: 3;
+	max-width: 524px;
+}
+.map-info__inner {
+	padding: 50px 25px 0px 42px;
+}
+.footer__logo {
+	margin: 0 0 55px 0;
+}
+.footer__item {
+	margin: 0 0 39.6px 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+.footer__item-head {
+	margin: 0 0 8px 0;
+	line-height: 16px;
+}
+.footer__item-body,
+.footer__phone,
+.footer__list-link {
+	font-family: 'Gotham Pro Medium';
+}
+.footer__item-body {
+	font-size: 18px;
+	& a {
+		color: #fff;
+	}
+}
+.footer-phone {
+	color: #fff;
+	font-size: 24px;
+	line-height: 23px;
+}
+.footer__list-item {
+	margin: 0 0 8px 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+.footer__item--blue {
+	min-height: 264px;
+	padding: 134px 25px 20px 42px;
+	background: url(../img/footer-blue.svg) no-repeat;
+	background-size: cover;
+}
+.footer__list-link {
+	color: #fff;
+	padding: 0 0 0 15px;
+	&.viber{
+		background: url(../img/sprite.svg#viber-dot) no-repeat left -5px top 2px;
+		background-size: 17px 15px;
+	}
+	&.whatsapp {
+		background: url(../img/sprite.svg#whatsapp-dot) no-repeat left -5px top 2px;
+		background-size: 17px 15px;
+	}
+	&.telegram {
+		background: url(../img/sprite.svg#telegram-dot) no-repeat left -5px top 2px;
+		background-size: 17px 15px;
+	}
+}
+.footer__rights {
+	margin: 20px 0 0 0;
+}
+.close__map {
+	width: 35px;
+	height: 35px;
+	background: url(../img/sprite.svg#x-mark) no-repeat center;
+	background-size: 66px 66px;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	cursor: pointer;
+}
+@media screen and (max-width: 1170px) {
+	.map-info {
+		max-width: 350px;
+	}
+}
+@media screen and (max-width: 769px) {
+	.map-wrapper {
+		height: 320px;
+	}
+	.map-info {
+		position: absolute;
+		max-width: 100%;
+		width: 100%;
+		top: 320px;
+	}
+	.map-info__inner {
+		padding: 50px 25px 0 14px
+	}
+	.close__map {
+		display: none;
+	}
+	.footer__logo {
+		margin: 0 0 25px 0;
+	}
+	.footer__item--blue {
+		padding: 185px 25px 20px 14px;
+	}
+
+}
+@media screen and (max-width: 413px) {
+	.footer__item--blue {
+		padding: 142px 25px 20px 14px;
+	}
+}

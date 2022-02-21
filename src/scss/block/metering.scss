@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	position: relative;
 	left: 8px;
-	background: url(../img/metering-bg.png);
+	background: url(../img/metering-bg.svg);
 	background-size: 100% 100%;
 	padding: 33px 128px 0 369px;
 	color: #fff;
@@ -23,14 +23,16 @@
 	font-family: 'Gotham Pro Medium';
 	font-size: 16px;
 	margin: 0 0 43px 0;
+	max-height: 70px;
 }
 .metering__input {
 	padding: 20px 15px 19px 50px;
 	margin: 0 39px 0 0;
 	width: 310px;
 	border-radius: 3px;
-	background: #2e3a4d url(../img/sprite.svg#icon-phone) no-repeat left 1px top 1px;
+	background: #2e3a4d url(../img/sprite.svg#icon-phone) no-repeat left 1px top 50%;
 	background-size: 50px 53px;
+	height: 100%;
 	color: #fff;
 }
 .metering__input::-webkit-input-placeholder { 
@@ -64,7 +66,7 @@
 	font-size: 16px;
 }
 .metering__btn {
-	padding: 17px 5px 17px 22px;
+	padding: 17px 45px 17px 22px;
 	color: #fff;
 	width: 310px;
 	font-size: 16px;
@@ -76,10 +78,106 @@
 		height: 12px;
 		position: absolute;
 		right: 11px;
-		top: 18px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 .metering__descr {
 	line-height: 17px;
 	font-size: 14px;
+}
+@media screen and (max-width: 1560px) {
+	.metering {
+		left: 0;
+	}
+}
+@media screen and (max-width: 1170px) {
+	.metering {
+		padding: 33px 62px 29px 369px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.metering__form {
+		flex-direction: column;
+		max-height: none;
+		margin: 0 0 29px 0;
+	}
+	.metering__heading {
+		margin: 0 0 35px 0;
+	}
+	.metering__input {
+		margin: 0 0 17px 0;
+	}
+	.metering__input,
+	.metering__btn {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 769px) {
+	.metering img {
+		top: -44px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.metering {
+		padding: 425px 21px 29px 21px;
+		margin: -85px 0 0 0;
+		background: url(../img/metering-bg-mobile.svg) no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+	.metering__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: -101px 0 0 0;
+		position: relative;
+		z-index: 2;
+	}
+	.metering__form {
+		width: 100%;
+		align-items: center;
+	}
+	.input__metering-box {
+		width: 100%;
+	}
+	.drilling__advantages {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+}
+@media screen and (max-width: 413px) {
+	.metering img {
+		width: 350px;
+	}
+	.metering {
+		padding: 357px 21px 29px;
+	}
+	.metering__btn,
+	.metering__input {
+		width: 100%;
+		font-size: 12px;
+	}
+	.metering__input::-webkit-input-placeholder { 
+		font-size: 12px;
+	}
+	.metering__input:-moz-placeholder { 
+		font-size: 12px;
+	}
+	.metering__input::-moz-placeholder {
+		font-size: 12px;
+	}
+	.metering__input:-ms-input-placeholder {
+		font-size: 12px;
+	}
+	.metering__input::-ms-input-placeholder {
+		font-size: 12px;
+	}
+	.metering__input::placeholder {
+		font-size: 12px;
+	}
+	h1 {
+		font-size: 25px;
+		line-height: 23px;
+	}
 }

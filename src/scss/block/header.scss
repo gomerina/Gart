@@ -1,3 +1,7 @@
+.header {
+	padding: 34px 0;
+	overflow: hidden;
+}
 .header__inner {
 	max-width: 1771px;
 	margin: 0 auto;
@@ -17,7 +21,6 @@
 .header__navigation {
 	display: flex;
 	align-items: flex-start;
-	margin: 34px 0 0 0;
 }
 .header__contacts {
 	margin: 10px 0 0 130px;
@@ -26,7 +29,7 @@
 		color: #37455C;
 	}
 }
-.header__contats-item {
+.header__contacts-item {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	&:nth-child(3) {
@@ -62,8 +65,9 @@
 	}
 }
 .header__buttons {
-	margin: -3px 0 0 auto;
-	position: relative;
+	position: absolute;
+	top: -36px;
+	right: 0;
 	display: flex;
 	& a {
 		font-family: 'Gotham Pro Medium';
@@ -102,5 +106,134 @@
 	&.rub img {
 		width: 27px;
 		height: 27px;
+	}
+}
+.header__mobile-icon {
+	display: none;
+}
+.burger-line {
+	display: none;
+}
+@media screen and (max-width: 1560px) {
+	.header {
+		padding: 20px 0;
+	}
+	.header__btn {
+		width: 167px;
+		min-height: 73px;
+	}
+	.header__buttons {
+		font-size: 12px;
+		top: -22px;
+	}
+	.header__btn {
+		padding: 15px 30px;
+	}
+	.header__contacts {
+		margin: 10px 0 0 40px;
+	}
+	.header__contacts-link.phone {
+		font-size: 16px;
+		background: url(../img/sprite.svg#garniture) no-repeat left -9px top 0;
+	}
+	.header__contacts-item:last-child {
+		margin: 0 0 0 20px;
+	}
+	.header__contacts-list {
+		margin: 0 0 0 13px;
+	}
+}
+@media screen and (max-width: 1170px) {
+	.write-us {
+		display: none;
+	}
+	.header__contacts-list {
+		margin: 0;
+	}
+	.header__contacts {
+		margin: 10px 0 0 20px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.header__contacts-item:not(:last-child) {
+		display: none;
+	}
+	.header__desctope-icon {
+		display: none;
+	}
+	.header__mobile-icon {
+		display: inline-block;
+	}
+	.header__btn-text.deep img {
+		width: 26px;
+	}
+	.header__btn-text {
+		font-size: 0;
+		& img {
+			margin: 0;
+		}
+	}
+	.burger-line {
+		display: block;
+		width: 19px;
+		height: 2px;
+		border-radius: 2px;
+		margin: 0 0 7px 0;
+		background: #fff;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.header__contacts-link {
+		&.phone {
+			font-family: 'Gotham Pro Bold';
+			font-size: 20px;
+			padding: 0 0 0 30px;
+			background: url(../img/sprite.svg#garniture) no-repeat left -16px top 0px;
+		}
+	}
+	.header__contacts-item:last-child {
+		margin: 0 0 0 5px;
+	}
+	.header {
+		padding: 25px 0;
+	}
+	.header__buttons {
+		top: -27px;
+	}
+}
+@media screen and (max-width: 769px) {
+	.header__contacts-item:last-child {
+		margin: 0;
+	}
+	.header__contacts {
+		margin: 0;
+	}
+	.header__inner {
+		padding: 0 0 0 18px;
+	}
+	.header__btn {
+		width: 85px;
+		border-radius: 0px 0 0 8px;
+		transform: skewX(15deg);
+		min-height: auto;
+		padding: 24px 15px;
+	}
+	.header__grey-btn {
+		background: #37455C;
+	}
+	.header__blue-btn {
+		background: #005AFF;
+		position: relative;
+		right: 7px;
+		z-index: 1;
+	}
+	.header__btn-text,
+	.header__burger {
+		transform: skewX(-15deg);
+	}
+	.header__buttons {
+		top: -26px;
+		right: -16px;
 	}
 }

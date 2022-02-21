@@ -30,6 +30,7 @@ h5 {
 }
 .heading__wrapper {
 	display: flex;
+	flex-wrap: wrap;
 }
 .heading-top {
 	font-size: 45px;
@@ -42,6 +43,7 @@ h5 {
 	line-height: 29px;
 	font-family: 'Gotham Pro Medium';
 }
+
 @import './nullstyle.scss';
 @import './font.scss';
 @import './block/header.scss';
@@ -50,3 +52,37 @@ h5 {
 @import './block/expirience.scss';
 @import './block/advantages.scss';
 @import './block/compare.scss';
+@import './block/tech.scss';
+@import './block/quality.scss';
+@import './block/guarantees.scss';
+@import './block/result.scss';
+@import './block/prices.scss';
+@import './block/deadlines.scss';
+@import './block/stages.scss';
+@import './block/footer.scss';
+
+@media screen and (max-width: 1560px) {
+	.heading-top {
+		font-size: 40px;
+	}
+	.heading-body {
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 769px) {
+	.heading-top {
+		font-size: 26px;
+	}
+	.heading-body {
+		font-size: 40px;
+	}
+	.subheading {
+		font-size: 14px;
+		line-height: 16.8px;
+	}
+}
+@media screen and (max-width: 413px) {
+	.heading-body {
+		font-size: 35px;
+	}
+}
