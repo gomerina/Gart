@@ -428,8 +428,8 @@ setTimeout(function(){
 	kamazImg.src = 'img/kamaz.png';
 	kamazImg.className = 'kamaz__img';
 	kamazImg.setAttribute('alt', '#')
-	treeImg.src = 'img/kamaz.png';
-	treeImg.className = 'kamaz__img';
+	treeImg.src = 'img/tree.png';
+	treeImg.className = 'tree__img';
 	treeImg.setAttribute('alt', '#')
 	techImgBox.appendChild(kamazImg);
 	techImgBox.appendChild(treeImg);

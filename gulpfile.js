@@ -71,10 +71,11 @@ const img = () => {
 	.pipe(newer('./public/img'))
 	.pipe(imagemin({
 		progressive: true,
+		quality: 70,
 		svgoPlugins: [{ removeViewBox: false }],
 		interlaced: true,
-          optimizationLevel: 3 // 0 to 7
-      }))
+		optimizationLevel: 3 // 0 to 7
+	}))
 	.pipe(dest('./public/img'))
 }
 // Обработка шрифтов
