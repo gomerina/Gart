@@ -184,6 +184,10 @@
 			margin: 0;
 		}
 	}
+	.header__blue-btn {
+		position: relative;
+		z-index: 15;
+	}
 	.header__contacts-link {
 		&.phone {
 			font-family: 'Gotham Pro Bold';
@@ -200,6 +204,7 @@
 	}
 	.header__buttons {
 		top: -27px;
+		right: -21px;
 	}
 }
 @media screen and (max-width: 769px) {
@@ -226,7 +231,6 @@
 		background: #005AFF;
 		position: relative;
 		right: 7px;
-		z-index: 1;
 	}
 	.header__btn-text,
 	.header__burger {

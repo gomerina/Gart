@@ -2,7 +2,8 @@
 	position: fixed;
 	z-index: 100;
 	left: 80px;
-	top: 171px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .indicator__dot--top,
 .indicator__dot--bottom {
@@ -90,5 +91,108 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+	}
+}
+.indicator__mobile-box {
+	display: none;
+}
+@media screen and (max-width: 1550px) {
+	.indicator {
+		display: none;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.indicator {
+		display: block;
+		left: auto;
+		transition: right .5s linear;
+		right: -100%;
+		top: 0px;
+		transform: none;
+		background: #37455C;
+		width: 100%;
+		height: 100vh;
+		overflow: auto;
+		z-index: 14;
+		padding: 80px 15px 20px 38px;
+		&.active {
+			transition: right .5s linear;
+			right: 0px;
+		}
+	}
+	.indicator__item-text {
+		visibility: visible;
+		opacity: 1;
+		font-size: 20px;
+		font-family: 'Gotham Pro Medium';
+		position: static;
+		color: #fff;
+		&.active {
+			transform: none;
+		}
+	}
+	.indicator__item-number {
+		display: none;
+	}
+	.indicator__item {
+		height: auto;
+		padding: 0;
+		margin: 0 0 20px 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.indicator__item:before {
+		display: none;
+	}
+	.indicator__dot--top,
+	.indicator__dot--bottom {
+		display: none;
+	}
+	.indicator__mobile-box {
+		display: flex;
+		color: #fff;
+		& .header__contacts {
+			align-items: center;
+			margin: 0;
+		}
+		& .header__contacts a {
+			color: #fff;
+		}
+		& .write-us {
+			display: inline-block;
+			margin: 0 15px 0 0;
+		}
+	}
+	.indicator__mobile-box .header__contacts-item:not(:last-child) {
+		display: inline-block;
+	}
+	.indicator__mobile-box .header__contacts-item:last-child {
+		display: none;
+	}
+}
+@media screen and (max-width: 550px) {
+	.indicator__mobile-box {
+		& .header__contacts {
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 0;
+		}
+		& .write-us {
+			margin: 0 0 7px 0;
+		}
+	}
+}
+@media screen and (max-width: 413px) {
+	.indicator__mobile-box .header__contacts-item:last-child {
+		display: inline-block;
+	}
+	.indicator__mobile-box .header__contacts-link.phone {
+		display: inline-block;
+		margin: 7px 0 0 0;
+		background: url(../img/sprite.svg#garniture-white) no-repeat left -16px top 0;
+	}
+	.indicator {
+		padding: 80px 15px 20px 15px;
 	}
 }

@@ -7,41 +7,43 @@ let singleAside = document.querySelector('.single-pipe__aside');
 let singleAsideBox = document.querySelector('.single__aside-box');
 let bothAsideBox = document.querySelector('.both__aside-box');
 let bothAside = document.querySelector('.both-pipe__aside');
-function logoMobile() {
+function breakpointOne() {
 	if (window.innerWidth < 769) {
 		logoBoxMobile.appendChild(logo);
 		logoBoxMobile.style.display = 'inline-block'
 		logoBoxDesctope.style.display = 'none';
 	}
 }
-function logoDesctope() {
+function breakpointTwo() {
 	if (window.innerWidth >= 769) {
 		logoBoxDesctope.appendChild(logo);
 		logoBoxDesctope.style.display = 'inline-block';
 		logoBoxMobile.style.display = 'none';
 	}
 }
-function asideMobile() {
+function breakpointThree() {
 	if (window.innerWidth <= 1023) {
 		pricesMobileBox.appendChild(singleAside);
 		pricesMobileBox.appendChild(bothAside);
+		$('.header__blue-btn').removeAttr('href');
 	}
 }
-function asideDesctope() {
+function breakpointFour() {
 	if (window.innerWidth > 1023) {
 		singleAsideBox.appendChild(singleAside);
 		bothAsideBox.appendChild(bothAside);
+		$('.header__blue-btn').attr('href', '#price');
 	}
 }
-logoMobile();
-logoDesctope();
-asideMobile();
-asideDesctope();
+breakpointOne();
+breakpointTwo();
+breakpointThree();
+breakpointFour();
 window.addEventListener('resize', function(){
-	logoMobile();
-	logoDesctope();
-	asideMobile();
-	asideDesctope();
+	breakpointOne();
+	breakpointTwo();
+	breakpointThree();
+	breakpointFour();
 })
 
 // Слайдер цен
@@ -91,7 +93,7 @@ for (let anchor of anchors) {
 }
 // Перемещаем пользователя вверх страницы при её обновлении во избежание багов
 $(window).on('beforeunload', function(){
-  $(window).scrollTop(0);
+	$(window).scrollTop(0);
 });
 // Индикаторы
 let indicatorItem = document.querySelectorAll('.indicator__item');
@@ -146,7 +148,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.drilling-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Опыт работы
-	if (window.pageYOffset >= expirienceTop) {
+	if (window.pageYOffset >= (expirienceTop - 50)) {
 		indicatorItemDrilling.classList.remove('active');
 		indicatorItemExp.classList.add('active');
 		$('.indicator__item.drilling-indicator').children('.indicator__item-number').removeClass('active');
@@ -159,7 +161,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.expirience-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Сравнение
-	if (window.pageYOffset >= compareTop) {
+	if (window.pageYOffset >= (compareTop - 50)) {
 		indicatorItemExp.classList.remove('active');
 		indicatorItemCompare.classList.add('active');
 		$('.indicator__item.expirience-indicator').children('.indicator__item-number').removeClass('active');
@@ -172,7 +174,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.compare-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Техника 
-	if (window.pageYOffset >= techTop) {
+	if (window.pageYOffset >= (techTop - 50)) {
 		indicatorItemCompare.classList.remove('active');
 		indicatorItemTech.classList.add('active');
 		$('.indicator__item.compare-indicator').children('.indicator__item-number').removeClass('active');
@@ -185,7 +187,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.tech-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Качество 
-	if (window.pageYOffset >= qualityTop) {
+	if (window.pageYOffset >= (qualityTop - 50)) {
 		indicatorItemTech.classList.remove('active');
 		indicatorItemQuality.classList.add('active');
 		$('.indicator__item.tech-indicator').children('.indicator__item-number').removeClass('active');
@@ -198,7 +200,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.quality-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Гарантии 
-	if (window.pageYOffset >= guaranteesTop) {
+	if (window.pageYOffset >= (guaranteesTop - 50)) {
 		indicatorItemQuality.classList.remove('active');
 		indicatorItemGuarantees.classList.add('active');
 		$('.indicator__item.quality-indicator').children('.indicator__item-number').removeClass('active');
@@ -211,7 +213,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Результат
-	if (window.pageYOffset >= resultTop) {
+	if (window.pageYOffset >= (resultTop - 50)) {
 		indicatorItemGuarantees.classList.remove('active');
 		indicatorItemResult.classList.add('active');
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-number').removeClass('active');
@@ -224,7 +226,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.result-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Цены
-	if (window.pageYOffset >= priceTop) {
+	if (window.pageYOffset >= (priceTop - 50)) {
 		indicatorItemResult.classList.remove('active');
 		indicatorItemPrice.classList.add('active');
 		$('.indicator__item.result-indicator').children('.indicator__item-number').removeClass('active');
@@ -237,7 +239,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.price-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Сроки
-	if (window.pageYOffset >= deadlinesTop) {
+	if (window.pageYOffset >= (deadlinesTop - 50)) {
 		indicatorItemPrice.classList.remove('active');
 		indicatorItemDeadlines.classList.add('active');
 		$('.indicator__item.price-indicator').children('.indicator__item-number').removeClass('active');
@@ -250,7 +252,7 @@ document.addEventListener('scroll', function(){
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Этапы
-	if (window.pageYOffset >= stagesTop) {
+	if (window.pageYOffset >= (stagesTop - 50)) {
 		indicatorItemDeadlines.classList.remove('active');
 		indicatorItemStages.classList.add('active');
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-number').removeClass('active');
@@ -280,4 +282,17 @@ document.addEventListener('scroll', function(){
 $('.close__map').click(function(){
 	$('.map-info').remove();
 	$('.map-wrapper').addClass('active');
+})
+$('.header__blue-btn').click(function(e){
+	if (window.innerWidth <= 1023) {
+		e.preventDefault();
+		$('.indicator').toggleClass('active');
+		$('html').toggleClass('lock');
+	} else {
+		return false;
+	}
+})
+$('.indicator__item').click(function(){
+	$('.indicator').removeClass('active');
+	$('html').removeClass('lock');
 })
