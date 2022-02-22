@@ -7,7 +7,7 @@ const notify = require('gulp-notify'); // Обработчик ошибок
 const concat = require('gulp-concat'); // Объединение css файлов
 const cssimport = require('gulp-cssimport'); // Объединение css файлов
 const autoprefixer = require('gulp-autoprefixer'); // Автопрефиксер
-const csso = require('gulp-csso'); // Сжатие CSS
+const cleanCSS = require('gulp-clean-css'); // Сжатие CSS
 const rename = require('gulp-rename'); // 2 файла CSS - сжатый и исходный
 const shorthand = require('gulp-shorthand');
 const uglify = require('gulp-uglify'); // Более сжатая форма записи css свойств
@@ -58,7 +58,7 @@ const scss = () => {
 	.pipe(concat('style.css'))
 	.pipe(dest('./public/css', {sourcemaps: true}))
 	.pipe(rename({suffix: '.min'}))
-	.pipe(csso())
+	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(dest('./public/css', {sourcemaps: true}))
 }
 
