@@ -392,12 +392,20 @@ $('.close-modal').click(function(){
 	enableScroll();
 })
 
-// Подргузка карты
-setTimeout(function loadMap (){
+// Подргузка контента
+setTimeout(function (){
 	let mapWrapper = document.querySelector('.map-wrapper');
 	mapWrapper.style.display = 'block';
 },5000)
 setTimeout(function(){
 	let techImg = document.querySelector('.tech__img');
-	techImg.style.display = 'block';
+	techImg.innerHTML = `<img src="img/kamaz.png" alt="" class="kamaz__img"> <img src="img/tree.png" alt="" class="tree__img">`
 }, 3000)
+setTimeout(function(){
+	let resultWrap = document.querySelector('.result__img');
+	resultWrap.innerHTML = 
+	`<img src="img/result-img.png" alt="" class="result-img--desctope">
+	<img src="img/result-img-mobile.png" alt="" class="result-img--mobile">
+	<img src="img/result-leaf-1.png" alt="" class="result__leaf--top">
+	<img src="img/result-leaf-2.png" alt="" class="result__leaf--bottom">`
+},4000)
