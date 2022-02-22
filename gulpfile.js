@@ -26,65 +26,70 @@ const svgSprite = require('gulp-svg-sprite');
 const html = () => {
 	// Звёздочка указывает на получение всех файлов. Фигурные скобки для конкретных форматов
 	return src('./src/html/*.html')
-		.pipe(plumber({
-			errorHandler: notify.onError()
-		}))
-		.pipe(fileInclude())
-		.pipe(dest('./public'))
-		.pipe(browserSync.stream());
+	.pipe(plumber({
+		errorHandler: notify.onError()
+	}))
+	.pipe(fileInclude())
+	.pipe(dest('./public'))
+	.pipe(browserSync.stream());
 }
 // Обработка JS
 const js = () => {
 	return src('./src/js/*.js', {sourcemaps: true})
-		.pipe(plumber({
-			errorHandler: notify.onError()
-		}))
-		.pipe(babel())
-		.pipe(uglify())
-		.pipe(dest('./public/js', {sourcemaps: true}))
-		.pipe(browserSync.stream());
+	.pipe(plumber({
+		errorHandler: notify.onError()
+	}))
+	.pipe(babel())
+	.pipe(uglify())
+	.pipe(dest('./public/js', {sourcemaps: true}))
+	.pipe(browserSync.stream());
 }
 // Обработка SCSS
 const scss = () => {
 	return src('./src/scss/*.scss', {sourcemaps: true})
-		.pipe(browserSync.stream())
-		.pipe(plumber({
-			errorHandler: notify.onError()
-		}))
-		.pipe(sass())
-		.pipe(autoprefixer())
-		.pipe(shorthand())
-		.pipe(groupCssMediaQueries())
-		.pipe(concat('style.css'))
-		.pipe(dest('./public/css', {sourcemaps: true}))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(csso())
-		.pipe(dest('./public/css', {sourcemaps: true}))
+	.pipe(browserSync.stream())
+	.pipe(plumber({
+		errorHandler: notify.onError()
+	}))
+	.pipe(sass())
+	.pipe(autoprefixer())
+	.pipe(shorthand())
+	.pipe(groupCssMediaQueries())
+	.pipe(concat('style.css'))
+	.pipe(dest('./public/css', {sourcemaps: true}))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(csso())
+	.pipe(dest('./public/css', {sourcemaps: true}))
 }
 
 // Обработка изображений
 const img = () => {
 	return src('./src/img/*.{jpg,png,svg,gif,jpeg}')
-		.pipe(plumber({
-			errorHandler: notify.onError()
-		}))
-		.pipe(newer('./public/img'))
-		.pipe(imagemin())
-		.pipe(dest('./public/img'))
+	.pipe(plumber({
+		errorHandler: notify.onError()
+	}))
+	.pipe(newer('./public/img'))
+	.pipe(imagemin({
+		progressive: true,
+		svgoPlugins: [{ removeViewBox: false }],
+		interlaced: true,
+          optimizationLevel: 3 // 0 to 7
+      }))
+	.pipe(dest('./public/img'))
 }
 // Обработка шрифтов
 const font = () => {
 	return src('./src/font/*.{ttf,otf,eot,otc,ttc,woff,woff2,svg}')
-		.pipe(plumber({
-			errorHandler: notify.onError()
-		}))
-		.pipe(newer('./public/font'))
-		.pipe(fonter({
-			formats: ["ttf", "woff", "eot", "svg"]
-		}))
-		.pipe(dest('./public/font'))
-		.pipe(ttf2woff2())
-		.pipe(dest('./public/font'))
+	.pipe(plumber({
+		errorHandler: notify.onError()
+	}))
+	.pipe(newer('./public/font'))
+	.pipe(fonter({
+		formats: ["ttf", "woff", "eot", "svg"]
+	}))
+	.pipe(dest('./public/font'))
+	.pipe(ttf2woff2())
+	.pipe(dest('./public/font'))
 		// .pipe(fontfacegen({
   //           filepath: "./src/scss",
   //           filename: "font.scss",
@@ -94,14 +99,14 @@ const font = () => {
 const svg = () => {
 	return src('./src/img/svg/*.svg')
 	.pipe(svgSprite({
-        mode: {
-            stack: {
+		mode: {
+			stack: {
                 	sprite: "../sprite.svg"  //sprite file name
                 }
             },
         }
-    ))
-    .pipe(dest('./public/img'));
+        ))
+	.pipe(dest('./public/img'));
 }
 // Наблюдение
 const watcher = () => {
@@ -133,4 +138,4 @@ exports.watch = watcher;
 exports.dev = series(
 	parallel (html, scss, js, img, svg, font),
 	parallel (watcher, server)
-);
+	);
