@@ -116,7 +116,7 @@ drillingTop = drilling.getBoundingClientRect().top + document.body.scrollTop;
 let expirience = document.querySelector('.expirience'),
 expirienceTop = expirience.getBoundingClientRect().top + document.body.scrollTop;
 let compare = document.querySelector('.compare'),
-compareTop = compare.getBoundingClientRect().top + document.body.scrollTop;
+compareTop = compare.getBoundingClientRect().top + document.body.scrollTop ;
 let tech = document.querySelector('.tech'),
 techTop = tech.getBoundingClientRect().top + document.body.scrollTop;
 let quality = document.querySelector('.quality'),
@@ -158,7 +158,7 @@ $(window).scroll(function(){
 		$('.indicator__item.drilling-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Опыт работы
-	if (window.pageYOffset >= (expirienceTop - 50)) {
+	if (window.pageYOffset >= (expirienceTop - 200)) {
 		indicatorItemDrilling.classList.remove('active');
 		indicatorItemExp.classList.add('active');
 		$('.indicator__item.drilling-indicator').children('.indicator__item-number').removeClass('active');
@@ -171,7 +171,7 @@ $(window).scroll(function(){
 		$('.indicator__item.expirience-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Сравнение
-	if (window.pageYOffset >= (compareTop - 50)) {
+	if (window.pageYOffset >= (compareTop - 300)) {
 		indicatorItemExp.classList.remove('active');
 		indicatorItemCompare.classList.add('active');
 		$('.indicator__item.expirience-indicator').children('.indicator__item-number').removeClass('active');
@@ -184,7 +184,7 @@ $(window).scroll(function(){
 		$('.indicator__item.compare-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Техника 
-	if (window.pageYOffset >= (techTop - 50)) {
+	if (window.pageYOffset >= (techTop)) {
 		indicatorItemCompare.classList.remove('active');
 		indicatorItemTech.classList.add('active');
 		$('.indicator__item.compare-indicator').children('.indicator__item-number').removeClass('active');
@@ -197,7 +197,7 @@ $(window).scroll(function(){
 		$('.indicator__item.tech-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Качество 
-	if (window.pageYOffset >= (qualityTop - 50)) {
+	if (window.pageYOffset >= (qualityTop - 300)) {
 		indicatorItemTech.classList.remove('active');
 		indicatorItemQuality.classList.add('active');
 		$('.indicator__item.tech-indicator').children('.indicator__item-number').removeClass('active');
@@ -210,7 +210,7 @@ $(window).scroll(function(){
 		$('.indicator__item.quality-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Гарантии 
-	if (window.pageYOffset >= (guaranteesTop - 50)) {
+	if (window.pageYOffset >= (guaranteesTop - 100)) {
 		indicatorItemQuality.classList.remove('active');
 		indicatorItemGuarantees.classList.add('active');
 		$('.indicator__item.quality-indicator').children('.indicator__item-number').removeClass('active');
@@ -223,7 +223,7 @@ $(window).scroll(function(){
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Результат
-	if (window.pageYOffset >= (resultTop - 50)) {
+	if (window.pageYOffset >= (resultTop - 200)) {
 		indicatorItemGuarantees.classList.remove('active');
 		indicatorItemResult.classList.add('active');
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-number').removeClass('active');
@@ -236,7 +236,7 @@ $(window).scroll(function(){
 		$('.indicator__item.result-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Цены
-	if (window.pageYOffset >= (priceTop - 50)) {
+	if (window.pageYOffset >= (priceTop - 250)) {
 		indicatorItemResult.classList.remove('active');
 		indicatorItemPrice.classList.add('active');
 		$('.indicator__item.result-indicator').children('.indicator__item-number').removeClass('active');
@@ -249,7 +249,7 @@ $(window).scroll(function(){
 		$('.indicator__item.price-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Сроки
-	if (window.pageYOffset >= (deadlinesTop - 50)) {
+	if (window.pageYOffset >= (deadlinesTop - 200)) {
 		indicatorItemPrice.classList.remove('active');
 		indicatorItemDeadlines.classList.add('active');
 		$('.indicator__item.price-indicator').children('.indicator__item-number').removeClass('active');
@@ -262,7 +262,7 @@ $(window).scroll(function(){
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Этапы
-	if (window.pageYOffset >= (stagesTop - 50)) {
+	if (window.pageYOffset >= (stagesTop)) {
 		indicatorItemDeadlines.classList.remove('active');
 		indicatorItemStages.classList.add('active');
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-number').removeClass('active');
@@ -392,9 +392,33 @@ $('.close-modal').click(function(){
 	enableScroll();
 })
 
-// Подргузка контента
-setTimeout(function (){
-	let mapWrapper = document.querySelector('.map-wrapper');
-	mapWrapper.style.display = 'block';
-},5000)
+// Карта
+function map(){
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('ymap', {
+			center: [52.255928, 104.336194],
+			zoom: 16
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),
 
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        	),
+        myPlacemarkWithContent = new ymaps.Placemark([52.255928, 104.336194], {
+        }, {
+        	iconLayout: 'default#imageWithContent',
+        	iconImageHref: '../img/marker.svg',
+        	iconImageSize: [25, 33],
+        	iconImageOffset: [-24, -24],
+        	iconContentOffset: [15, 15],
+        	iconContentLayout: MyIconContentLayout
+        });
+
+        myMap.geoObjects
+        .add(myPlacemarkWithContent);
+        myMap.behaviors.disable('scrollZoom')
+    });
+}
+map();
