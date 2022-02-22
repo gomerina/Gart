@@ -395,7 +395,6 @@ $('.close-modal').click(function(){
 //Карта
 setTimeout(function(){
 	let elem = document.createElement('script');
-	elem.type = 'text/javascript';
 	elem.src = '//api-maps.yandex.ru/2.1/?&lang=ru-RU&onload=getYaMap';
 	document.getElementsByTagName('body')[0].appendChild(elem);
 }, 4000);
@@ -428,12 +427,12 @@ setTimeout(function(){
 	let techImgBox = document.querySelector('.tech__img')
 	kamazImg.src = 'img/kamaz.png';
 	kamazImg.className = 'kamaz__img';
-	kamazImg.setAttribute('alt', '')
+	kamazImg.setAttribute('alt', '#')
 	treeImg.src = 'img/kamaz.png';
 	treeImg.className = 'kamaz__img';
-	treeImg.setAttribute('alt', '')
+	treeImg.setAttribute('alt', '#')
 	techImgBox.appendChild(kamazImg);
 	techImgBox.appendChild(treeImg);
-}, 2000)
+}, 4000)
 
 
