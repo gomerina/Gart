@@ -4,7 +4,7 @@
 	background: #fff;
 	position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 4000;
 	&.show {
 		transform: translateY(0);
 		opacity: 1;
@@ -14,6 +14,9 @@
 		transform: translateY(-25px);
 		opacity: 0;
 		transition: .3s linear;
+	}
+	&.dark {
+		background: #37455C;
 	}
 }
 .header__inner {
@@ -76,6 +79,11 @@
 		font-size: 20px;
 		padding: 0 0 0 32px;
 		background: url(../img/sprite.svg#garniture) no-repeat left -16px top 0px;
+		transition: opacity .3s linear;
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 }
 .header__buttons {
@@ -99,6 +107,12 @@
 	background: url(../img/sprite.svg#btn-grey) no-repeat;
 	background-size: 100% 100%;
 	padding: 39px 25px 42px 58px;
+	opacity: 1;
+	visibility: visible;
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 .header__blue-btn {
 	background: url(../img/sprite.svg#btn-blue) no-repeat;

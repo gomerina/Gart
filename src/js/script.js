@@ -298,7 +298,10 @@ $('.header__blue-btn').click(function(e){
 	if (window.innerWidth <= 1023) {
 		e.preventDefault();
 		$('.indicator').toggleClass('active');
-		$('html').addClass('lock');
+		$('html').toggleClass('lock');
+		$('.header').toggleClass('dark');
+		$('.header__grey-btn').toggleClass('hide');
+		$('.header__contacts-link').toggleClass('hide');
 	} else {
 		return false;
 	}
