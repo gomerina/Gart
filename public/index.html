@@ -55,7 +55,7 @@
 	</header>
 
 	<main class="page-body">
-		<div class="drilling">
+		<div class="drilling" id="drilling">
 			<div class="drilling__inner">
 				<a href="#" class="mobile__logo-box">
 					
@@ -80,7 +80,7 @@
 				</div>
 			</div>	
 		</div>
-		<div class="expirience">
+		<div class="expirience" id="expirience">
 			<div class="expirience__inner">
 				<div class="heading__wrapper expirience__heading-wrapper">
 					<h2 class="heading expirience__heading white-text">
@@ -192,7 +192,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="compare">
+		<div class="compare" id="compare">
 			<div class="compare__inner">
 				<h2 class="heading compare__heading">
 					<div class="heading-top compare__heading-top">После</div>
@@ -243,7 +243,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tech white-text">
+		<div class="tech white-text" id="tech">
 			<div class="tech__inner">
 				<div class="tech__heading-box">
 					<h2 class="heading tech__heading">
@@ -261,7 +261,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="quality">
+		<div class="quality" id="quality">
 			<div class="quality__inner">
 				<div class="quality-head">
 					<div class="quality__heading">
@@ -335,7 +335,7 @@
 				</div>
 			</div>	
 		</div>
-		<div class="guarantees">
+		<div class="guarantees" id="guarantees">
 			<div class="guarantees__inner">
 				<h2 class="heading guarantees__heading white-text">
 					<div class="heading-top guarantees__heading-top">ДОКУМЕНТЫ И</div>
@@ -377,7 +377,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="result">
+		<div class="result" id="result">
 			<div class="result__inner">
 				<h2 class="heading result__heading">
 					<div class="heading-top result__heading-top">РЕЗУЛЬТАТ</div>
@@ -412,7 +412,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="prices">
+		<div class="prices" id="price">
 			<div class="prices__inner">
 				<h2 class="heading prices__heading">
 					<div class="heading-top prices__heading-top">Честные цены</div>
@@ -623,7 +623,7 @@
 				</div>
 			</div>
 		</div>	
-		<div class="deadlines">
+		<div class="deadlines" id="deadlines">
 			<div class="deadlines__inner">
 				<h2 class="heading deadlines__heading white-text">
 					<div class="heading-top deadlines__heading-top">Бурим</div>
@@ -682,7 +682,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="stages">
+		<div class="stages" id="stages">
 			<div class="stages__inner">
 				<h2 class="heading stages__heading">
 					<div class="heading__wrapper">
@@ -884,7 +884,7 @@
 			</div>
 		</div>
 	</main>
-		<footer class="footer">
+		<footer class="footer" id="footer">
 		<div class="map-wrapper">
 			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A07e4edfc7f68d105747209f30d19cd73caa7f54da7ef65b6787bf669364c84b0&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
 		</div>	
@@ -937,7 +937,79 @@
 		</div>
 	</footer>
 
+	<div class="indicator">
+	<a href="#drilling" class="indicator__item drilling-indicator active">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number active">01</div>
+		<div class="indicator__item-text active">Бурение</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#expirience" class="indicator__item expirience-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">02</div>
+		<div class="indicator__item-text">Опыт работы</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#compare" class="indicator__item compare-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">03</div>
+		<div class="indicator__item-text">Сравнение</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#tech" class="indicator__item tech-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">04</div>
+		<div class="indicator__item-text">Техника</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#quality" class="indicator__item quality-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">05</div>
+		<div class="indicator__item-text">Качество</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#guarantees" class="indicator__item guarantees-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">06</div>
+		<div class="indicator__item-text">Гарантии</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#result" class="indicator__item result-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">07</div>
+		<div class="indicator__item-text">Результат</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#price" class="indicator__item price-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">08</div>
+		<div class="indicator__item-text">Цены</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#deadlines" class="indicator__item deadlines-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">09</div>
+		<div class="indicator__item-text">Сроки</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#stages" class="indicator__item stages-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">10</div>
+		<div class="indicator__item-text">Схема работы</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+	<a href="#footer" class="indicator__item footer-indicator">
+		<div class="indicator__dot--top"></div>
+		<div class="indicator__item-number">11</div>
+		<div class="indicator__item-text">Контакты</div>
+		<div class="indicator__dot--bottom"></div>
+	</a>
+</div>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

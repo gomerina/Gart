@@ -7,6 +7,10 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
+	&.active {
+		position: static;
+		height: 786px;
+	}
 }
 .map__box {
 	max-width: 1252px;

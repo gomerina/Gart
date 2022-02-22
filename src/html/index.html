@@ -10,7 +10,7 @@
 <body>
 	@@include('chunk/header.html')
 	<main class="page-body">
-		<div class="drilling">
+		<div class="drilling" id="drilling">
 			<div class="drilling__inner">
 				<a href="#" class="mobile__logo-box">
 					
@@ -35,7 +35,7 @@
 				</div>
 			</div>	
 		</div>
-		<div class="expirience">
+		<div class="expirience" id="expirience">
 			<div class="expirience__inner">
 				<div class="heading__wrapper expirience__heading-wrapper">
 					<h2 class="heading expirience__heading white-text">
@@ -147,7 +147,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="compare">
+		<div class="compare" id="compare">
 			<div class="compare__inner">
 				<h2 class="heading compare__heading">
 					<div class="heading-top compare__heading-top">После</div>
@@ -198,7 +198,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tech white-text">
+		<div class="tech white-text" id="tech">
 			<div class="tech__inner">
 				<div class="tech__heading-box">
 					<h2 class="heading tech__heading">
@@ -216,7 +216,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="quality">
+		<div class="quality" id="quality">
 			<div class="quality__inner">
 				<div class="quality-head">
 					<div class="quality__heading">
@@ -290,7 +290,7 @@
 				</div>
 			</div>	
 		</div>
-		<div class="guarantees">
+		<div class="guarantees" id="guarantees">
 			<div class="guarantees__inner">
 				<h2 class="heading guarantees__heading white-text">
 					<div class="heading-top guarantees__heading-top">ДОКУМЕНТЫ И</div>
@@ -332,7 +332,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="result">
+		<div class="result" id="result">
 			<div class="result__inner">
 				<h2 class="heading result__heading">
 					<div class="heading-top result__heading-top">РЕЗУЛЬТАТ</div>
@@ -367,7 +367,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="prices">
+		<div class="prices" id="price">
 			<div class="prices__inner">
 				<h2 class="heading prices__heading">
 					<div class="heading-top prices__heading-top">Честные цены</div>
@@ -578,7 +578,7 @@
 				</div>
 			</div>
 		</div>	
-		<div class="deadlines">
+		<div class="deadlines" id="deadlines">
 			<div class="deadlines__inner">
 				<h2 class="heading deadlines__heading white-text">
 					<div class="heading-top deadlines__heading-top">Бурим</div>
@@ -637,7 +637,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="stages">
+		<div class="stages" id="stages">
 			<div class="stages__inner">
 				<h2 class="heading stages__heading">
 					<div class="heading__wrapper">
@@ -840,7 +840,12 @@
 		</div>
 	</main>
 	@@include('chunk/footer.html')
+	@@include('chunk/indicator.html')
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
