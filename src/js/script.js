@@ -392,3 +392,12 @@ $('.close-modal').click(function(){
 	enableScroll();
 })
 
+// Подргузка карты
+setTimeout(function loadMap (){
+	let mapWrapper = document.querySelector('.map-wrapper');
+	mapWrapper.style.display = 'block';
+},5000)
+setTimeout(function(){
+	let techImg = document.querySelector('.tech__img');
+	techImg.style.display = 'block';
+}, 3000)
