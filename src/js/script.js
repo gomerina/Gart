@@ -392,33 +392,33 @@ $('.close-modal').click(function(){
 	enableScroll();
 })
 
-// Карта
-function map(){
-	ymaps.ready(function () {
-		var myMap = new ymaps.Map('ymap', {
-			center: [52.255928, 104.336194],
-			zoom: 16
-		}, {
-			searchControlProvider: 'yandex#search'
-		}),
+// // Карта
+// function map(){
+// 	ymaps.ready(function () {
+// 		var myMap = new ymaps.Map('ymap', {
+// 			center: [52.255928, 104.336194],
+// 			zoom: 16
+// 		}, {
+// 			searchControlProvider: 'yandex#search'
+// 		}),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        	),
-        myPlacemarkWithContent = new ymaps.Placemark([52.255928, 104.336194], {
-        }, {
-        	iconLayout: 'default#imageWithContent',
-        	iconImageHref: '../img/marker.svg',
-        	iconImageSize: [25, 33],
-        	iconImageOffset: [-24, -24],
-        	iconContentOffset: [15, 15],
-        	iconContentLayout: MyIconContentLayout
-        });
+//         // Создаём макет содержимого.
+//         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//         	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//         	),
+//         myPlacemarkWithContent = new ymaps.Placemark([52.255928, 104.336194], {
+//         }, {
+//         	iconLayout: 'default#imageWithContent',
+//         	iconImageHref: '../img/marker.svg',
+//         	iconImageSize: [25, 33],
+//         	iconImageOffset: [-24, -24],
+//         	iconContentOffset: [15, 15],
+//         	iconContentLayout: MyIconContentLayout
+//         });
 
-        myMap.geoObjects
-        .add(myPlacemarkWithContent);
-        myMap.behaviors.disable('scrollZoom')
-    });
-}
-map();
+//         myMap.geoObjects
+//         .add(myPlacemarkWithContent);
+//         myMap.behaviors.disable('scrollZoom')
+//     });
+// }
+// map();
