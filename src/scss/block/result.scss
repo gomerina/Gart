@@ -1,13 +1,13 @@
 .result {
 	transform: skewY(-12.5deg);
 	padding: 0 0 200px 0;
-	overflow: hidden;
 }
 .result__inner {
 	max-width: 1222px;
 	margin: 0 auto;
 	padding: 187px 14px 0 14px;
 	transform: skewY(12.5deg);
+	overflow: hidden;
 }
 .result__heading {
 	margin: 0 0 56px 0;

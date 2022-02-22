@@ -1,6 +1,20 @@
 .header {
-	padding: 34px 0;
+	padding: 34px 0 19px 0;
 	overflow: hidden;
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	&.show {
+		transform: translateY(0);
+		opacity: 1;
+		transition: .3s linear;
+	}
+	&.hidden {
+		transform: translateY(-25px);
+		opacity: 0;
+		transition: .3s linear;
+	}
 }
 .header__inner {
 	max-width: 1771px;
@@ -121,13 +135,11 @@
 	.header__btn {
 		width: 167px;
 		min-height: 73px;
+		padding: 15px 30px;
 	}
 	.header__buttons {
 		font-size: 12px;
 		top: -22px;
-	}
-	.header__btn {
-		padding: 15px 30px;
 	}
 	.header__contacts {
 		margin: 10px 0 0 40px;

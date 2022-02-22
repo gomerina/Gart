@@ -102,16 +102,6 @@
 	position: relative;
 	font-family: 'Gotham Pro Medium';
 	font-size: 14px;
-	&:before {
-		content: '';
-		width: 82px;
-		height: 120px;
-		position: absolute;
-		left: -73px;
-		transform: rotate(-90deg);
-		z-index: -1;
-		background: linear-gradient(0deg, #FFFFFF -71.67%, rgba(255, 255, 255, 0) 63.33%);
-	}
 }
 .deadlines-lightning {
 	margin: 0 18px 0 0;

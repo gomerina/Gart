@@ -46,7 +46,9 @@ html.lock {
 	line-height: 29px;
 	font-family: 'Gotham Pro Medium';
 }
-
+.page-body {
+	overflow: hidden;
+}
 @import './nullstyle.scss';
 @import './font.scss';
 @import './block/header.scss';
@@ -64,6 +66,7 @@ html.lock {
 @import './block/stages.scss';
 @import './block/footer.scss';
 @import './block/indicator.scss';
+@import './block/modal.scss';
 
 @media screen and (max-width: 1560px) {
 	.heading-top {
