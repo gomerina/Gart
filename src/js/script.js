@@ -392,33 +392,36 @@ $('.close-modal').click(function(){
 	enableScroll();
 })
 
-// // Карта
-// function map(){
-// 	ymaps.ready(function () {
-// 		var myMap = new ymaps.Map('ymap', {
-// 			center: [52.255928, 104.336194],
-// 			zoom: 16
-// 		}, {
-// 			searchControlProvider: 'yandex#search'
-// 		}),
+//Карта
 
-//         // Создаём макет содержимого.
-//         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//         	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//         	),
-//         myPlacemarkWithContent = new ymaps.Placemark([52.255928, 104.336194], {
-//         }, {
-//         	iconLayout: 'default#imageWithContent',
-//         	iconImageHref: '../img/marker.svg',
-//         	iconImageSize: [25, 33],
-//         	iconImageOffset: [-24, -24],
-//         	iconContentOffset: [15, 15],
-//         	iconContentLayout: MyIconContentLayout
-//         });
+setTimeout(function(){
+	var elem = document.createElement('script');
+	elem.type = 'text/javascript';
+	elem.src = '//api-maps.yandex.ru/2.1/?&lang=ru-RU&onload=getYaMap';
+	document.getElementsByTagName('body')[0].appendChild(elem);
+}, 4000);
+function getYaMap(){
+	var myMap = new ymaps.Map('ymap', {
+		center: [52.255928, 104.336194],
+		zoom: 16
+	}, {
+		searchControlProvider: 'yandex#search'
+	}),
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    	),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    	hintContent: 'Собственный значок метки',
+    	balloonContent: 'Это красивая метка'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/marker.svg',
+        iconImageSize: [25, 33],
+        iconImageOffset: [-5, -38]
+    })
+    myMap.geoObjects.add(myPlacemark)
+    myMap.behaviors.disable('scrollZoom')
+}
 
-//         myMap.geoObjects
-//         .add(myPlacemarkWithContent);
-//         myMap.behaviors.disable('scrollZoom')
-//     });
-// }
-// map();
+
+
