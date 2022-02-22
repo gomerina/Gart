@@ -393,9 +393,8 @@ $('.close-modal').click(function(){
 })
 
 //Карта
-
 setTimeout(function(){
-	var elem = document.createElement('script');
+	let elem = document.createElement('script');
 	elem.type = 'text/javascript';
 	elem.src = '//api-maps.yandex.ru/2.1/?&lang=ru-RU&onload=getYaMap';
 	document.getElementsByTagName('body')[0].appendChild(elem);
@@ -422,6 +421,19 @@ function getYaMap(){
     myMap.geoObjects.add(myPlacemark)
     myMap.behaviors.disable('scrollZoom')
 }
-
+// Оптимизация
+setTimeout(function(){
+	let kamazImg = document.createElement('img');
+	let treeImg = document.createElement('img');
+	let techImgBox = document.querySelector('.tech__img')
+	kamazImg.src = 'img/kamaz.png';
+	kamazImg.className = 'kamaz__img';
+	kamazImg.setAttribute('alt', '')
+	treeImg.src = 'img/kamaz.png';
+	treeImg.className = 'kamaz__img';
+	treeImg.setAttribute('alt', '')
+	techImgBox.appendChild(kamazImg);
+	techImgBox.appendChild(treeImg);
+}, 2000)
 
 
