@@ -72,7 +72,7 @@
 						<h4 class="metering__heading">Замер глубины скважины</h4>
 						<form class="metering__form">
 							<div class="input__metering-box">
-								<input type="tel" name="metering" class="metering__input" placeholder="Введите номер телефона">
+								<input type="tel" name="metering" class="phone__input" placeholder="Введите номер телефона">
 							</div>	
 							<button class="blue__btn metering__btn">Узнать стоимость скважины</button>
 						</form>
@@ -1025,14 +1025,28 @@
 		</div>
 	</div>
 </div>
+	<div class="modal-box">	
 	<div class="modal">
-	<div class="modal__head">
-		<span class="white-text">Заказ консультации</span>
-		<div class="close-modal">
-			<div class="x-mark"></div>
+		<div class="modal__head">
+			<span class="white-text">Заказ консультации</span>
+			<div class="close-modal">
+				<div class="x-mark"></div>
+			</div>
 		</div>
+		<div class="modal__inner">
+			<form class="modal__form">
+				<input type="text" name="modal__form-name" class="name__input" placeholder="Имя">
+				<input type="tel" name="modal__form-tel" class="phone__input" placeholder="Введите номер телефона">
+				<button class="blue__btn white-text">Заказать консультацию</button>
+			</form>
+			<div class="modal__text white-text">
+				<p class="modal__descr">Наши специалисты ответят на любые ваши вопросы</p>
+				<p class="modal__descr">Консультация и выезд специалиста абсолютно бесплатны</p>
+			</div>
+		</div>	
 	</div>
-</div>
+</div>	
+	<div class="overlay"></div>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script
 	src="https://code.jquery.com/jquery-3.6.0.min.js"

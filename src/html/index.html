@@ -27,7 +27,7 @@
 						<h4 class="metering__heading">Замер глубины скважины</h4>
 						<form class="metering__form">
 							<div class="input__metering-box">
-								<input type="tel" name="metering" class="metering__input" placeholder="Введите номер телефона">
+								<input type="tel" name="metering" class="phone__input" placeholder="Введите номер телефона">
 							</div>	
 							<button class="blue__btn metering__btn">Узнать стоимость скважины</button>
 						</form>
@@ -842,7 +842,8 @@
 	</main>
 	@@include('chunk/footer.html')
 	@@include('chunk/indicator.html')
-	<!-- @@include('chunk/modal.html') -->
+	@@include('chunk/modal.html')
+	<div class="overlay"></div>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script
 	src="https://code.jquery.com/jquery-3.6.0.min.js"

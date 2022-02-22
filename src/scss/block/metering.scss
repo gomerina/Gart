@@ -25,7 +25,7 @@
 	margin: 0 0 43px 0;
 	max-height: 70px;
 }
-.metering__input {
+.phone__input {
 	padding: 20px 15px 19px 50px;
 	margin: 0 39px 0 0;
 	width: 310px;
@@ -35,32 +35,32 @@
 	height: 100%;
 	color: #fff;
 }
-.metering__input::-webkit-input-placeholder { 
+.phone__input::-webkit-input-placeholder { 
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
 }
-.metering__input:-moz-placeholder { 
+.phone__input:-moz-placeholder { 
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
 }
-.metering__input::-moz-placeholder {
+.phone__input::-moz-placeholder {
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
 }
-.metering__input:-ms-input-placeholder {
+.phone__input:-ms-input-placeholder {
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
 }
-.metering__input::-ms-input-placeholder {
+.phone__input::-ms-input-placeholder {
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
 }
-.metering__input::placeholder {
+.phone__input::placeholder {
 	color:    #fff;
 	opacity:  .5;
 	font-size: 16px;
@@ -105,10 +105,10 @@
 	.metering__heading {
 		margin: 0 0 35px 0;
 	}
-	.metering__input {
+	.phone__input {
 		margin: 0 0 17px 0;
 	}
-	.metering__input,
+	.phone__input,
 	.metering__btn {
 		width: 90%;
 	}
@@ -154,26 +154,26 @@
 		padding: 357px 21px 29px;
 	}
 	.metering__btn,
-	.metering__input {
+	.phone__input {
 		width: 100%;
 		font-size: 12px;
 	}
-	.metering__input::-webkit-input-placeholder { 
+	.phone__input::-webkit-input-placeholder { 
 		font-size: 12px;
 	}
-	.metering__input:-moz-placeholder { 
+	.phone__input:-moz-placeholder { 
 		font-size: 12px;
 	}
-	.metering__input::-moz-placeholder {
+	.phone__input::-moz-placeholder {
 		font-size: 12px;
 	}
-	.metering__input:-ms-input-placeholder {
+	.phone__input:-ms-input-placeholder {
 		font-size: 12px;
 	}
-	.metering__input::-ms-input-placeholder {
+	.phone__input::-ms-input-placeholder {
 		font-size: 12px;
 	}
-	.metering__input::placeholder {
+	.phone__input::placeholder {
 		font-size: 12px;
 	}
 	h1 {

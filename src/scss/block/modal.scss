@@ -1,17 +1,28 @@
-.modal {
+.modal-box {
+	max-width: 650px;
+	width: 100%;
 	position: fixed;
 	left: 50%;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s linear;
 	z-index: 1000;
-	background: #37455C;
-	max-width: 650px;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.modal {
 	width: 100%;
-	height: 60vh;
+	background: #37455C;
 }
 .modal__head {
 	padding: 26px 20px 0 38px;
 	position: relative;
+	overflow: hidden;
+	height: 72px;
 }
 .close-modal {
 	width: 85px;
@@ -22,10 +33,92 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	right: -9px;
+	top: 0;
+	cursor: pointer;
 	& .x-mark {
 		background: url(../img/sprite.svg#x-mark) no-repeat center;
 		background-size: 50px 50px;
 		width: 50px;
 		height: 50px;
+		transform: skewX(-15deg);
+	}
+}
+.modal__inner {
+	margin: 92px 0 0 0;
+	padding: 0 52px 20px 52px;
+	& .phone__input {
+		margin: 0;
+		width: 100%;
+		height: 54px;
+		margin: 0 0 17px 0;
+	}
+	& .blue__btn {
+		padding: 12px 40px 12px 22px;
+	}
+}
+.name__input {
+	padding: 20px 15px 19px 50px;
+	margin: 0 39px 0 0;
+	width: 100%;
+	height: 54px;
+	border-radius: 3px;
+	background: #2e3a4d url(../img/sprite.svg#icon-user) no-repeat left 5px top 50%;
+	background-size: 40px 43px;
+	color: #fff;
+	margin: 0 0 17px 0;
+}
+.name__input::-webkit-input-placeholder { 
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.name__input:-moz-placeholder { 
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.name__input::-moz-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.name__input:-ms-input-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.name__input::-ms-input-placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.name__input::placeholder {
+	color:    #fff;
+	opacity:  .5;
+	font-size: 16px;
+}
+.modal__text {
+	text-align: center;
+	margin: 50px 0 0 0;
+	font-size: 14px;
+}
+.modal__descr {
+	margin: 0 0 15px 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.modal-box,
+	.modal {
+		height: 100%;
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 413px) {
+	.modal__inner {
+		padding: 0 20px 20px;
 	}
 }

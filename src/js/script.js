@@ -91,7 +91,7 @@ for (let anchor of anchors) {
 		})
 	})
 }
-// Перемещаем пользователя вверх страницы при её обновлении во избежание багов
+// Перемещаем пользователя вверх страницы при её обновлении для избежание багов индикатора
 $(window).on('beforeunload', function(){
 	$(window).scrollTop(0);
 });
@@ -293,11 +293,12 @@ $('.close__map').click(function(){
 	$('.map-info').remove();
 	$('.map-wrapper').addClass('active');
 })
+// Адаптивное меню
 $('.header__blue-btn').click(function(e){
 	if (window.innerWidth <= 1023) {
 		e.preventDefault();
 		$('.indicator').toggleClass('active');
-		$('html').toggleClass('lock');
+		$('html').addClass('lock');
 	} else {
 		return false;
 	}
@@ -340,3 +341,51 @@ window.addEventListener("DOMContentLoaded", function() {
 	input.addEventListener("keydown", mask, false)
 });
 });
+// Запрет прокрутки страницы
+function preventDefault(e) {
+	e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+	if (keys[e.keyCode]) {
+		preventDefault(e);
+		return false;
+	}
+}
+
+var supportsPassive = false;
+try {
+	window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+		get: function () { supportsPassive = true; } 
+	}));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function enableScroll() {
+	window.removeEventListener('DOMMouseScroll', preventDefault, false);
+	window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+	window.removeEventListener('touchmove', preventDefault, wheelOpt);
+	window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+// Вызов модального окна
+$('.consultation-btn').click(function(){
+	$('.modal-box').addClass('active');
+	$('.overlay').addClass('active');
+	disableScroll();
+})
+// Закрытие модального окна
+$('.close-modal').click(function(){
+	$('.modal-box').removeClass('active');
+	$('.overlay').removeClass('active');
+	enableScroll();
+})
+

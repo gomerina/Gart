@@ -49,6 +49,23 @@ html.lock {
 .page-body {
 	overflow: hidden;
 }
+.overlay {
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 999;
+	background: rgba(0, 0, 0, .3);
+	transition: opacity .3s linear;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .3s linear;
+	}
+}
 @import './nullstyle.scss';
 @import './font.scss';
 @import './block/header.scss';

@@ -134,12 +134,17 @@
 	}
 	.header__btn {
 		width: 167px;
-		min-height: 73px;
+		min-height: 101px;
 		padding: 15px 30px;
+	}
+	.header__grey-btn,
+	.header__blue-btn {
+		background-size: 243px 105px;
 	}
 	.header__buttons {
 		font-size: 12px;
 		top: -22px;
+		right: 0;
 	}
 	.header__contacts {
 		margin: 10px 0 0 40px;
@@ -198,7 +203,7 @@
 	}
 	.header__blue-btn {
 		position: relative;
-		z-index: 15;
+		z-index: 4000;
 	}
 	.header__contacts-link {
 		&.phone {
@@ -211,12 +216,26 @@
 	.header__contacts-item:last-child {
 		margin: 0 0 0 5px;
 	}
+	.header__btn {
+		position: relative;
+	}
+	.header__btn-text.deep {
+		position: absolute;
+		top: 55%;
+		left: 55%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.header__burger {
+		position: absolute;
+		top: 57%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
 	.header {
-		padding: 25px 0;
+		padding: 15px 0;
 	}
 	.header__buttons {
 		top: -27px;
-		right: -21px;
 	}
 }
 @media screen and (max-width: 769px) {
@@ -251,6 +270,15 @@
 	.header__buttons {
 		top: -26px;
 		right: -16px;
+	}
+	.header__btn-text.deep,
+	.header__burger {
+		position: static;
+		transform: skewX(-15deg);
+	}
+	.header__grey-btn,
+	.header__blue-btn {
+		background-size: 100% 100%;
 	}
 }
 @media screen and (max-width: 413px) {
