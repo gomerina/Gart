@@ -64,7 +64,7 @@ const scss = () => {
 
 // Обработка изображений
 const img = () => {
-	return src('./src/img/*.{jpg,png,svg,gif,jpeg}')
+	return src('./src/img/*.{jpg,png,svg,gif,jpeg,ico}')
 	.pipe(plumber({
 		errorHandler: notify.onError()
 	}))
