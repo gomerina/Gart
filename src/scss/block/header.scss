@@ -60,15 +60,15 @@
 	font-family: 'Gotham Pro Bold';
 	padding: 0 0 0 15px;
 	&.viber {
-		background: url(../img/sprite.svg#viber-dot) no-repeat left -7px top 0px;
+		background: url(../img/sprite.svg#viber-dot) no-repeat left -7px top 50%;
 		background-size: 25px 20px;
 	}
 	&.whatsapp {
-		background: url(../img/sprite.svg#whatsapp-dot) no-repeat left -7px top 0px;
+		background: url(../img/sprite.svg#whatsapp-dot) no-repeat left -7px top 50%;
 		background-size: 25px 20px;
 	}
 	&.telegram {
-		background: url(../img/sprite.svg#telegram-dot) no-repeat left -7px top 0px;
+		background: url(../img/sprite.svg#telegram-dot) no-repeat left -7px top 50%;
 		background-size: 25px 20px;
 	}
 	&.phone {
