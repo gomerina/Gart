@@ -92,9 +92,9 @@ for (let anchor of anchors) {
 	})
 }
 // Перемещаем пользователя вверх страницы при её обновлении для избежание багов индикатора
-$(window).on('beforeunload', function(){
-	$(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function(){
+// 	$(window).scrollTop(0);
+// });
 // Индикаторы
 let indicatorItem = document.querySelectorAll('.indicator__item');
 let indicatorItemDrilling = document.querySelector('.indicator__item.drilling-indicator');
@@ -300,8 +300,7 @@ $('.header__blue-btn').click(function(e){
 		$('.indicator').toggleClass('active');
 		$('html').toggleClass('lock');
 		$('.header').toggleClass('dark');
-		$('.header__grey-btn').toggleClass('hide');
-		$('.header__contacts-link').toggleClass('hide');
+		$('.header__burger').toggleClass('active')
 	} else {
 		return false;
 	}
@@ -383,6 +382,15 @@ function enableScroll() {
 $('.consultation-btn').click(function(){
 	$('.modal-box').addClass('active');
 	$('.overlay').addClass('active');
+	$('.modal__head-text').text('Заказ консультации');
+	$('.modal__btn').text('Заказать консультацию')
+	disableScroll();
+})
+$('#application-btn').click(function(){
+	$('.modal-box').addClass('active');
+	$('.overlay').addClass('active');
+	$('.modal__head-text').text('Оставить заявку');
+	$('.modal__btn').text('Оставить заявку')
 	disableScroll();
 })
 // Закрытие модального окна

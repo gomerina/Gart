@@ -57,7 +57,7 @@ html.lock {
 	left: 0;
 	opacity: 0;
 	visibility: hidden;
-	z-index: 999;
+	z-index: 4500;
 	background: rgba(0, 0, 0, .3);
 	transition: opacity .3s linear;
 	&.active {
