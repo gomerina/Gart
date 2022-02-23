@@ -92,9 +92,9 @@ for (let anchor of anchors) {
 	})
 }
 // Перемещаем пользователя вверх страницы при её обновлении для избежание багов индикатора
-$(window).on('beforeunload', function(){
-	$(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function(){
+// 	$(window).scrollTop(0);
+// });
 // Индикаторы
 let indicatorItem = document.querySelectorAll('.indicator__item');
 let indicatorItemDrilling = document.querySelector('.indicator__item.drilling-indicator');

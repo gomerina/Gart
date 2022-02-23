@@ -39,9 +39,10 @@
 }
 .stages__img-text {
 	text-transform: none;
+	display: inherit;
 	text-align: center;
 	padding: 0 15px;
-	margin: 0 0 30px 0;
+	margin: 0 auto 30px auto;
 	font-size: 18px;
 	font-family: 'Gotham Pro Medium';
 }
@@ -112,9 +113,9 @@
 	&:nth-child(3)::after {
 		content: '';
 		background: url(../img/stage-arrow-right.svg) no-repeat;
-		background-size: 25px 100%;
+		background-size: 25px 98%;
 		width: 29px;
-		height: calc(100% + 51px);
+		height: calc(98% + 51px);
 		position: absolute;
 		right: -40px;
 		top: 50%;
@@ -122,9 +123,9 @@
 	&:nth-child(4)::after {
 		content: '';
 		background: url(../img/stage-arrow-left.svg) no-repeat;
-		background-size: 25px 100%;
+		background-size: 25px 98%;
 		width: 29px;
-		height: calc(100% + 51px);
+		height: calc(98% + 51px);
 		position: absolute;
 		left: -38px;
 		top: 50%;
@@ -195,13 +196,6 @@
 	bottom: 20px;
 }
 @media screen and (max-width: 1170px) {
-	.stage__item:nth-child(3)::after, .stage__item:nth-child(4)::after {
-		content: none;
-		display: none;
-	}
-	.stages__inner {
-		padding: 211px 14px 0 14px;
-	}
 	.stage__item .blue__btn {
 		padding: 17px 34px 21px 22px;
 	}
@@ -210,6 +204,13 @@
 	}
 }
 @media screen and (max-width: 1023px) {
+	.stage__item:nth-child(3)::after, .stage__item:nth-child(4)::after {
+		content: none;
+		display: none;
+	}
+	.stages__inner {
+		padding: 211px 14px 0 14px;
+	}
 	.stages__items-box {
 		grid-template-columns: 4fr;
 		grid-row-gap: 9px;
