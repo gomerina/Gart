@@ -92,9 +92,9 @@ for (let anchor of anchors) {
 	})
 }
 // Перемещаем пользователя вверх страницы при её обновлении для избежание багов индикатора
-// $(window).on('beforeunload', function(){
-// 	$(window).scrollTop(0);
-// });
+$(window).on('beforeunload', function(){
+	$(window).scrollTop(0);
+});
 // Индикаторы
 let indicatorItem = document.querySelectorAll('.indicator__item');
 let indicatorItemDrilling = document.querySelector('.indicator__item.drilling-indicator');
@@ -158,7 +158,7 @@ $(window).scroll(function(){
 		$('.indicator__item.drilling-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Опыт работы
-	if (window.pageYOffset >= (expirienceTop - 200)) {
+	if (window.pageYOffset >= (expirienceTop - 100)) {
 		indicatorItemDrilling.classList.remove('active');
 		indicatorItemExp.classList.add('active');
 		$('.indicator__item.drilling-indicator').children('.indicator__item-number').removeClass('active');
@@ -184,7 +184,7 @@ $(window).scroll(function(){
 		$('.indicator__item.compare-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Техника 
-	if (window.pageYOffset >= (techTop)) {
+	if (window.pageYOffset >= (techTop - 300)) {
 		indicatorItemCompare.classList.remove('active');
 		indicatorItemTech.classList.add('active');
 		$('.indicator__item.compare-indicator').children('.indicator__item-number').removeClass('active');
@@ -197,7 +197,7 @@ $(window).scroll(function(){
 		$('.indicator__item.tech-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Качество 
-	if (window.pageYOffset >= (qualityTop - 300)) {
+	if (window.pageYOffset >= (qualityTop + 600)) {
 		indicatorItemTech.classList.remove('active');
 		indicatorItemQuality.classList.add('active');
 		$('.indicator__item.tech-indicator').children('.indicator__item-number').removeClass('active');
@@ -210,7 +210,7 @@ $(window).scroll(function(){
 		$('.indicator__item.quality-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Гарантии 
-	if (window.pageYOffset >= (guaranteesTop - 100)) {
+	if (window.pageYOffset >= (guaranteesTop + 600)) {
 		indicatorItemQuality.classList.remove('active');
 		indicatorItemGuarantees.classList.add('active');
 		$('.indicator__item.quality-indicator').children('.indicator__item-number').removeClass('active');
@@ -223,7 +223,7 @@ $(window).scroll(function(){
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Результат
-	if (window.pageYOffset >= (resultTop - 200)) {
+	if (window.pageYOffset >= (resultTop + 600)) {
 		indicatorItemGuarantees.classList.remove('active');
 		indicatorItemResult.classList.add('active');
 		$('.indicator__item.guarantees-indicator').children('.indicator__item-number').removeClass('active');
@@ -236,7 +236,7 @@ $(window).scroll(function(){
 		$('.indicator__item.result-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Цены
-	if (window.pageYOffset >= (priceTop - 250)) {
+	if (window.pageYOffset >= (priceTop + 600)) {
 		indicatorItemResult.classList.remove('active');
 		indicatorItemPrice.classList.add('active');
 		$('.indicator__item.result-indicator').children('.indicator__item-number').removeClass('active');
@@ -249,7 +249,7 @@ $(window).scroll(function(){
 		$('.indicator__item.price-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Сроки
-	if (window.pageYOffset >= (deadlinesTop - 200)) {
+	if (window.pageYOffset >= (deadlinesTop + 600)) {
 		indicatorItemPrice.classList.remove('active');
 		indicatorItemDeadlines.classList.add('active');
 		$('.indicator__item.price-indicator').children('.indicator__item-number').removeClass('active');
@@ -262,7 +262,7 @@ $(window).scroll(function(){
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-text').removeClass('active');
 	}
 	// Этапы
-	if (window.pageYOffset >= (stagesTop)) {
+	if (window.pageYOffset >= (stagesTop + 600)) {
 		indicatorItemDeadlines.classList.remove('active');
 		indicatorItemStages.classList.add('active');
 		$('.indicator__item.deadlines-indicator').children('.indicator__item-number').removeClass('active');

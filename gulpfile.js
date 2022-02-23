@@ -21,15 +21,15 @@ const ttf2woff2 = require("gulp-ttf2woff2"); // Ковертация шрифт�
 const fontfacegen = require("gulp-fontfacegen"); // Ковертация шрифтов
 const groupCssMediaQueries = require("gulp-group-css-media-queries"); // Групирование медиа запросов
 const svgSprite = require('gulp-svg-sprite');
-
+const htmlmin = require('gulp-htmlmin'); // Минификация HTML
 // Обработка HTML
 const html = () => {
-	// Звёздочка указывает на получение всех файлов. Фигурные скобки для конкретных форматов
 	return src('./src/html/*.html')
 	.pipe(plumber({
 		errorHandler: notify.onError()
 	}))
 	.pipe(fileInclude())
+	.pipe(htmlmin({ collapseWhitespace: true }))
 	.pipe(dest('./public'))
 	.pipe(browserSync.stream());
 }
