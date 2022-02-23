@@ -26,6 +26,7 @@ function breakpointThree() {
 		pricesMobileBox.appendChild(singleAside);
 		pricesMobileBox.appendChild(bothAside);
 		$('.header__blue-btn').removeAttr('href');
+		$('.header__grey-btn').attr('href','#price');
 	}
 }
 function breakpointFour() {
@@ -33,6 +34,7 @@ function breakpointFour() {
 		singleAsideBox.appendChild(singleAside);
 		bothAsideBox.appendChild(bothAside);
 		$('.header__blue-btn').attr('href', '#price');
+		$('.header__grey-btn').attr('href','#stages');
 	}
 }
 breakpointOne();
@@ -52,6 +54,8 @@ sliders.forEach(function(el) {
 	var swiper = new Swiper(el, {
 		spaceBetween: 33,
 		initialSlide: 1,
+		centeredSlides: false,
+		loop: false,
 		pagination: {
 			el: el.querySelector('.swiper-pagination'),
 			clickable: true,
@@ -308,6 +312,8 @@ $('.header__blue-btn').click(function(e){
 $('.indicator__item').click(function(){
 	$('.indicator').removeClass('active');
 	$('html').removeClass('lock');
+	$('.header').removeClass('dark')
+	$('.header__burger').removeClass('active');
 })
 // Маска на инпут телефона
 window.addEventListener("DOMContentLoaded", function() {
@@ -413,20 +419,20 @@ function getYaMap(){
 	}, {
 		searchControlProvider: 'yandex#search'
 	}),
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    	'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    	),
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-    	hintContent: 'Собственный значок метки',
-    	balloonContent: 'Это красивая метка'
-    }, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/marker.svg',
-        iconImageSize: [25, 33],
-        iconImageOffset: [-5, -38]
-    })
-    myMap.geoObjects.add(myPlacemark)
-    myMap.behaviors.disable('scrollZoom')
+	MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+		),
+	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+		hintContent: 'Собственный значок метки',
+		balloonContent: 'Это красивая метка'
+	}, {
+		iconLayout: 'default#image',
+		iconImageHref: 'img/marker.svg',
+		iconImageSize: [25, 33],
+		iconImageOffset: [-5, -38]
+	})
+	myMap.geoObjects.add(myPlacemark)
+	myMap.behaviors.disable('scrollZoom')
 }
 // Оптимизация
 setTimeout(function(){
